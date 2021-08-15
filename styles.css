@@ -1,10 +1,7 @@
 body {
   background-color: #181a1b;
   color: #cfcbca;
-}
-
-body::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 *, *::before, *::after {
@@ -26,8 +23,42 @@ body::-webkit-scrollbar {
   max-width: 60ch;
 }
 
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .section-info p::after {
   content: " | ";
+}
+
+.arrow-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.arrow {
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  padding: 20px;
+  max-width: fit-content;
+}
+
+.right {
+  float: right;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
 
 .card,
